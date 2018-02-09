@@ -12,7 +12,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 	//$not	=	$html->find("font[plaintext^=Case Not Found]",0)->plaintext;
 	echo "$check\n";
-	while ($check != null)
+	while ($check == null)
 	{	
 		
 		$record = array( 'check' =>$check, 'link' => $link);

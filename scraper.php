@@ -14,13 +14,13 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	echo "$check\n";
 		
 	
-	   } 
-	while ($check != "" || $check != null);
-	if($check)
+	   } if($check)
 		{
 		$record = array( 'check' =>$check, 'link' => $link);
 		scraperwiki::save(array('check','link'), $record);
 		$x++;
 		}
+	while ($check != "" || $check != null);
+	
 }
 ?>

@@ -21,8 +21,6 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		scraperwiki::save(array('x','link','check'), $record);
 		echo "$check\n";
 		$x++;
-		$html->__destruct();
-
 		}
 		
 		

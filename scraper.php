@@ -11,7 +11,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$html	=	file_get_html($link);
 	$not	=	$html->find("font[plaintext^=Case Not Found]",0)->plaintext;
 	echo "$not\n";
-	while ($not != "Case Not Found")
+	while ($not != null)
 	{	
 		$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 		$record = array( 'check' =>$check, 'link' => $link);

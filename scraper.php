@@ -12,11 +12,14 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 	while($check != null || $check != "")
 	{
-		echo "$check\n";
+		forearch($html->find("/html/body")as $element)
+		{
+		$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 		$record = array( 'check' =>$check, 'link' => $link);
 		scraperwiki::save(array('check','link'), $record);
 		echo "$check\n";
 		$x++;
+		}
 	
 	}
 	

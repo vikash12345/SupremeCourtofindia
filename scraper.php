@@ -12,8 +12,8 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$html	=	file_get_html($link);
 	$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 	
-	record = array('check' =>$check);
-   	scraperwiki::save(array('check'), $record);
+	record = array('check' =>$check,'link' =>$link);
+   	scraperwiki::save(array('check','link'), $record);
 	$x++;
 	} 
 	while ($check == "" || $check == null);

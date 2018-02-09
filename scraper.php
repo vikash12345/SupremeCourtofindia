@@ -12,7 +12,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 	while($check != null || $check != "")
 	{
-		forearch($html->find("/html/body")as $element)
+		foreach($html->find("/html/body")as $element)
 		{
 		$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 		$record = array( 'check' =>$check, 'link' => $link);

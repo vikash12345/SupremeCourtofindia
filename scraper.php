@@ -2,7 +2,7 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
-$years	= array('1995');
+$years	= array('1990');
 
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
@@ -17,6 +17,6 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$x++;
 	
 	   } 
-	while ($check != "" || $check != null);
+	while ($check == "" || $check == null);
 }
 ?>

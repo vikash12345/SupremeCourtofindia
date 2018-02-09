@@ -5,7 +5,7 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
-$years	= array('1950');
+$years	= array('1995');
 
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
@@ -13,10 +13,10 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	do {
 	$link	=	'http://supremecourtofindia.nic.in/php/case_status/case_status_process.php?d_no='.$x.'&d_yr='.$years[$mainpage];
 	$html	=	file_get_html($link);
-	echo $check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
-	
+	$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
+	echo "$check\n";
     $x++;
 	} 
-	while ($x <= 5 /*$check == "" || check == null*/);
+	while ($check == "" || check == null);
 }
 ?>

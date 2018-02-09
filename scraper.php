@@ -17,6 +17,6 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$x++;
 	
 	   } 
-	while ($check == "" || $check == null);
+	while ($check == !" || $check != null);
 }
 ?>

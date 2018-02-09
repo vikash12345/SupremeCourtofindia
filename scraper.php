@@ -1,7 +1,4 @@
 <?
-// This is a template for a PHP scraper on morph.io (https://morph.io)
-// including some code snippets below that you should find helpful
-
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
@@ -15,6 +12,9 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$html	=	file_get_html($link);
 	$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
 	echo "$check\n";
+	record = array( 'link' =>$link);
+   scraperwiki::save(array('link'), $record);
+
     $x++;
 	} 
 	while ($check == "" || check == null);

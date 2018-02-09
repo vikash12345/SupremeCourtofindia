@@ -6,7 +6,7 @@ $years	= array('1950');
 
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
-	$x = 1;
+	$x = 2;
 	$link	=	'http://supremecourtofindia.nic.in/php/case_status/case_status_process.php?d_no='.$x.'&d_yr='.$years[$mainpage];
 	$html	=	file_get_html($link);
 	$not	=	$html->find("font[plaintext^=Case Not Found]",0)->plaintext;

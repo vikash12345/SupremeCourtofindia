@@ -19,6 +19,8 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		scraperwiki::save(array('link','check'), $record);
 		echo "$check\n";
 		$x++;
+		unset($html);
+		unset($check);
 		
 	}
 }

@@ -11,11 +11,12 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$html	=	file_get_html($link);
 	$not	=	$html->find("font[plaintext^=Case Not Found]",0)->plaintext;
 	echo "$not\n";
+	$record = array( 'check' =>$check, 'link' => $link);
+		scraperwiki::save(array('check','link'), $record);
 	/*while ($not != "Case Not Found")
 	{	
 		$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
-		$record = array( 'check' =>$check, 'link' => $link);
-		scraperwiki::save(array('check','link'), $record);
+		
 		echo "$check\n";
 		$x++;
 	}*/

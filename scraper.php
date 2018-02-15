@@ -10,7 +10,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
 
 	$loop =   1;
-    $RecordFlag =   true;
+    	$RecordFlag =   true;
 	while($RecordFlag == true) 
 	{
   		if (!$checking) 
@@ -22,14 +22,13 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		$link	=	'http://supremecourtofindia.nic.in/php/case_status/case_status_process.php?d_no='.$loop.'&d_yr='.$years[$mainpage];
 		$html	=	file_get_html($link);
 		$check	=	$html->find("h5[plaintext^=Diary No]",0)->plaintext;
-		$loop	+=  1;
-		if($check)
-		{
+		
 		$record = array('link' => $link ,  'check' =>$check);
 		scraperwiki::save(array('link','check'), $record);
 		echo "$check\n";
+		$loop	+=  1;
 		
-		}
+		
 		
 		
 	} 

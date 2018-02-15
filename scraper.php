@@ -13,6 +13,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
     	$RecordFlag =   true;
 	while($RecordFlag == true) 
 	{
+		echo "$checking\n";
   		if (!$checking) 
 							{
 								$RecordFlag =   false;
@@ -25,7 +26,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		
 		$record = array('link' => $link ,  'check' =>$check);
 		scraperwiki::save(array('link','check'), $record);
-		echo "$check\n";
+		
 		$loop	+=  1;
 		
 		

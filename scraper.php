@@ -13,6 +13,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$htmlcheck		=	file_get_html($linkabc);
 	if($htmlcheck)
 	{
+		echo "$linkabc\n";
 	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
 	$name			=	$htmlcheck->find("h5[2]",0)->plaintext;
 	$dairyno		=	$htmlcheck->find("//*[@id='collapse1']/div/table/tbody/tr[1]/td[2]/div",0)->plaintext;

@@ -20,7 +20,8 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		
 		
 		scraperwiki::save_sqlite(array('num'), array('num' => $checking,
- 'link' => $linkabc
+ 'link' => $linkabc,
+ 'name' => $name
 ));
 	}
 		

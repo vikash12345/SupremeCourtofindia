@@ -16,13 +16,14 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
 	$name			=	$htmlcheck->find("h5[2]",0)->plaintext;
 	$dairyno		=	$htmlcheck->find("//*[@id='collapse1']/div/table/tbody/tr[1]/td[2]/div",0)->plaintext;
-
+	$cno			=	$htmlcheck->find("//*[@id='collapse1']/div/table/tbody/tr[2]/td[2]/div",0)->plaintext;
 		
 		
 		scraperwiki::save_sqlite(array('num'), array('num' => $checking,
  'link' => trim($linkabc),
  'name' => trim($name),
- 'dairyno'=> trim($dairyno)
+ 'dairyno'=> trim($dairyno),
+'cno'=> trim($cno),
 ));
 	}
 		

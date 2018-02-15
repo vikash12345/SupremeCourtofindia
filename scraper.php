@@ -14,7 +14,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	if($htmlcheck)
 	{
 	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
-	$name			=	$htmlcheck->find("/html/body/h5[2]",0)->plaintext;
+	$name			=	$htmlcheck->find("/html/body/h5",1)->plaintext;
 	echo "$name\n";	
 
 		

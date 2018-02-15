@@ -21,6 +21,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		{
 			$RecordFlag =   false;
 			break;
+			echo "Link finished";
 		}
 		
 		

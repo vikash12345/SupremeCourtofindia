@@ -14,8 +14,10 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	if($htmlcheck)
 	{
 	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
-	echo "$checking\n";
-	sleep(5);	
+	$name			=	$htmlcheck->find("/html/body/h5[2]",0)->plaintext;
+	echo "$name\n";	
+
+		
 		
 		scraperwiki::save_sqlite(array('num'), array('num' => $checking,
  'link' => $linkabc

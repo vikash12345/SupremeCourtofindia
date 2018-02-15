@@ -20,9 +20,9 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 		
 		
 		scraperwiki::save_sqlite(array('num'), array('num' => $checking,
- 'link' => $linkabc,
- 'name' => $name,
- 'dairyno'=> $dairyno
+ 'link' => trim($linkabc),
+ 'name' => trim($name),
+ 'dairyno'=> trim($dairyno)
 ));
 	}
 		

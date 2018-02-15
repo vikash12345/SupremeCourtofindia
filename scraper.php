@@ -1,7 +1,7 @@
 <?
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-$years	= array('1950');
+$years	= array('2000');
 for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 {
 	$RecordLoop =  0;
@@ -14,6 +14,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	if($htmlcheck)
 	{
 	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
+	echo "$checking\n";
 	sleep(5);	
 		$record = array('link' => $linkabc ,  'check' => $checking);
 		scraperwiki::save(array('link','check'), $record); 

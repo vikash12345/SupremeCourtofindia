@@ -13,10 +13,10 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 	$htmlcheck		=	file_get_html($linkabc);
 	if($htmlcheck)
 	{
-	$checking		=	$htmlcheck->find("/html/body/h5[1]",0)->plaintext;
+	$checking		=	$htmlcheck->find("h5[plaintext^=Diary No]",0)->plaintext;
 	sleep(5);	
 		$record = array('link' => $linkabc ,  'check' => $checking);
-		scraperwiki::save(array('link','check'), $record);
+		scraperwiki::save(array('link','check'), $record); 
 	}
 		
 		if (!$checking) 

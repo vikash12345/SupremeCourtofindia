@@ -17,7 +17,7 @@ for ($mainpage = 0; $mainpage < sizeof($years); $mainpage++)
 								$RecordFlag =   false;
 								break;
 							}	
-		$record = array('link' => $link ,  'check' =>$check);
+		$record = array('link' => $link ,  'check' =>$checking);
 		scraperwiki::save(array('link','check'), $record);
 		$loop	+=  1;
 		

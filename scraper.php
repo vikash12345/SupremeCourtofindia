@@ -1,7 +1,12 @@
 <?
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-$years	= array('1995',
+$years	= array('1990',
+'1991',
+'1992',
+'1993',
+'1994',
+'1995',
 '1996',
 '1997',
 '1998',
